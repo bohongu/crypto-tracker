@@ -45,8 +45,10 @@ interface PriceData {
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 7px;
+  gap: 10px;
+  margin-bottom: 20px;
 `;
+
 const Item = styled.div`
   display: flex;
   flex-direction: column;
@@ -55,16 +57,20 @@ const Item = styled.div`
   border-radius: 10px;
   background-color: #fdcb6e;
 `;
+
 const Title = styled.div`
   font-size: 16px;
 `;
+
 const Time = styled.div`
   color: ${(props) => props.theme.accentColor};
 `;
+
 const Value = styled.div`
   font-size: 18px;
   font-weight: 600;
 `;
+
 const Price = () => {
   const { coinId } = useOutletContext<PriceProps>();
   const { isLoading, data } = useQuery<PriceData>(["price", coinId], () =>
