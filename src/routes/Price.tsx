@@ -119,11 +119,6 @@ const Price = () => {
           </Item>
           <Item>
             <Title>Percent Change</Title>
-            <Time>30 Days</Time>
-            <Value>{data?.quotes.USD.percent_change_30d}</Value>
-          </Item>
-          <Item>
-            <Title>Percent Change</Title>
             <Time>1 Years</Time>
             <Value>{data?.quotes.USD.percent_change_1y}</Value>
           </Item>
